@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Container, SSRProvider } from '@/components/bootstrap'
+import NavBar from './NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* <div>This div is shared across layouts</div> */}
         <SSRProvider>
+          <NavBar />
           <main>
             <Container className='py-4'>{children}</Container>
           </main>
