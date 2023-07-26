@@ -5,6 +5,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 export default function NavBar() {
+  // app directory router hooks (useRouter, usePathname, useSearchParams)
   // get current path
   const pathname = usePathname()
   // programmatically navigate between different pages, router.push etc.
