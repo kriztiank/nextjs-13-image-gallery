@@ -14,13 +14,7 @@ export default function NavBar() {
   // const params = useSearchParams()
 
   return (
-    <Navbar
-      bg='primary'
-      variant='dark'
-      sticky='top'
-      expand='sm'
-      collapseOnSelect
-    >
+    <Navbar bg='primary' variant='dark' sticky='top' expand='sm' collapseOnSelect>
       <Container>
         <Navbar.Brand as={Link} href='/'>
           NextJS 13.4 Image Gallery
@@ -29,7 +23,13 @@ export default function NavBar() {
         <Navbar.Collapse id='main-navbar'>
           <Nav>
             <Nav.Link as={Link} href='/hello' active={pathname === '/hello'}>
-              Hello
+              hello
+            </Nav.Link>
+            <Nav.Link as={Link} href='/static' active={pathname === '/static'}>
+              static
+            </Nav.Link>
+            <Nav.Link as={Link} href='/dynamic' active={pathname === '/dynamic'}>
+              dynamic
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
