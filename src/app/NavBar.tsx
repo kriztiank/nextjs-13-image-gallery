@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 export default function NavBar() {
@@ -11,7 +11,7 @@ export default function NavBar() {
   // programmatically navigate between different pages, router.push etc.
   // const router = useRouter()
   // get the search params out of the URL search params
-  // const params = useSearchParams()
+  // const searchParams = useSearchParams()
 
   return (
     <Navbar bg='primary' variant='dark' sticky='top' expand='sm' collapseOnSelect>
@@ -34,6 +34,17 @@ export default function NavBar() {
             <Nav.Link as={Link} href='/isr' active={pathname === '/isr'}>
               isr
             </Nav.Link>
+            <NavDropdown title='Topics' id='topics-dropdown'>
+              <NavDropdown.Item as={Link} href='/topics/health'>
+                Health
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href='/topics/fitness'>
+                Fitness
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href='/topics/coding'>
+                Coding
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
